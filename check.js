@@ -1,13 +1,13 @@
 // Keep a reference to the old check.
 let _check = check;
 check = function (value, pattern, message) {
-  try {
+  if (typeof message === 'undefined') {
     _check(value, pattern);
-  } catch (error) {
-    if (typeof message != 'undefined') {
+  } else {
+    try {
+      _check(value, pattern);
+    } catch (error) {
       throw new Error(message);
-    } else {
-      throw error;
     }
   }
 };
