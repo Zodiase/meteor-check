@@ -1,6 +1,6 @@
 Package.describe({
   name: 'zodiase:check',
-  version: '0.0.3',
+  version: '0.0.4',
   // Brief, one-line summary of the package.
   summary: 'Add custom error messages to checks.',
   // URL to the Git repository containing the source code for this package.
