@@ -1,3 +1,5 @@
+import { check } from 'meteor/zodiase:check';
+
 Tinytest.add('Backward compatibility', function (test) {
   test.throws(function () {
     check('foo', Number);
@@ -15,6 +17,6 @@ Tinytest.add('Custom message', function (test) {
   try {
     check('foo', Number, errorMsg);
   } catch (error) {
-    test.equal(errorMsg, error.message);
+    test.equal(error.message, `Match error: ${errorMsg}`);
   }
 });
