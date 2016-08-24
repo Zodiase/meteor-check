@@ -6,7 +6,7 @@ let nonoptimizableTryCatchBlock = function (value, pattern, message) {
   try {
     _check(value, pattern);
   } catch (error) {
-    throw new Error(message);
+    throw new Match.Error(message);
   }
 };
 check = function (value, pattern, message) {
